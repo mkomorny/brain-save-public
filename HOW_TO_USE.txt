@@ -1,0 +1,39 @@
+HOW TO USE: brain-save
+=======================
+
+PURPOSE
+  Directly record a new idea, decision, technical constraint, setup preference,
+  or task into your personal Second Brain knowledge base.
+
+CAPABILITIES
+  - Instant write execution when called directly by you (your command is automatic permission)
+  - Automatic inline hashtag parsing (#live-actions, #decision, #task)
+  - Automatic volatility flag detection (!durable, !state, !volatile)
+  - Tags and metadata automatically indexed for semantic search
+
+USE CASES
+  - Saving a permanent design decision made during a coding session
+  - Logging an API credential location or environment constraint (no secrets)
+  - Recording personal UI/audio preferences
+
+IDEAS
+  - Use !durable for architectural decisions that shouldn't change
+  - Use !state for current project state that will evolve
+  - Use !volatile for quick temporary notes
+  - Include project tags so they cluster cleanly in future searches
+
+PROMPTS YOU CAN PASTE
+  /brain-save Chose WebView2 for desktop UI #live-actions #decision !durable
+
+  /brain-save Need to test OSC reconnection logic on Live 12 #live-actions #task !state
+
+  /brain-save Default sample rate for all audio export scripts is 48kHz #audio #standards !durable
+
+EXAMPLE FLOW
+  You: /brain-save Chose WebView2 for desktop UI #live-actions #decision !durable
+  Agent: [Executes remember tool immediately, reports new entry ID and confirmed content]
+
+DEFAULT GOALS IF YOU DON'T NAME ONE
+  1. Parse input text, tags, and volatility flags
+  2. Call remember MCP tool immediately
+  3. Report confirmed saved memory ID and details
